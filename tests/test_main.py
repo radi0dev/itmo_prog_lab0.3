@@ -30,7 +30,8 @@ os.chdir(_old_cwd)
 
 # свой временный users.json на каждый тест
 
-@pytest.fixturedef users_file(tmp_path, monkeypatch):
+@pytest.fixture
+def users_file(tmp_path, monkeypatch):
     path = tmp_path / "users.json"
     monkeypatch.setattr(main, "USERS_FILE", str(path))
     return path
