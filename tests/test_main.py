@@ -60,7 +60,8 @@ def test_check_time_format_valid():
     "abc",
     "08-00",
     "",
-])def test_check_time_format_invalid(text):
+])
+def test_check_time_format_invalid(text):
     assert main.check_time_format(text) is None
 
 # check_coordinates
@@ -76,7 +77,8 @@ def test_check_coordinates_valid():
     "100,30.36",
     "59.93,200",
     "abc,def",
-])def test_check_coordinates_invalid(text):
+])
+def test_check_coordinates_invalid(text):
     assert main.check_coordinates(text) is None
 
 # check_timezone
@@ -89,7 +91,8 @@ def test_check_timezone_valid():
     "Not/AZone",
     "blah",
     "",
-])def test_check_timezone_invalid(text):
+])
+def test_check_timezone_invalid(text):
     assert main.check_timezone(text) is None
 
 # has_time / has_position / has_timezone
